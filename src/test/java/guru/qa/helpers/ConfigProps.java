@@ -4,7 +4,7 @@ import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @ConfigProps.Sources({
-        "classpath:remote.properties"
+        "classpath:config/remote.properties"
 })
 public interface ConfigProps extends Config{
 

@@ -5,7 +5,7 @@ import org.aeonbits.owner.Config;
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @ConfigProps.Sources({
         "system:properties",
-        "classpath:credential.properties"
+        "classpath:config/credential.properties"
 })
 
 public interface ConfigForAuth extends Config {
