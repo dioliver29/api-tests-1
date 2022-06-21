@@ -42,11 +42,7 @@ tasks.withType(JavaCompile) {
 
 tasks.withType(Test) {
     systemProperties(System.getProperties())
-    useJUnitPlatform()
-}
-
-task systemProperties(type: Test) {
-    useJUnitPlatform{
+    useJUnitPlatform() {
         includeTags "demowebshop"
     }
 }
