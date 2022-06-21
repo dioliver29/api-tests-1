@@ -45,3 +45,9 @@ tasks.withType(Test) {
     useJUnitPlatform()
 }
 
+task systemProperties(type: Test) {
+    useJUnitPlatform{
+        includeTags "demowebshop"
+    }
+}
+
