@@ -10,6 +10,9 @@ import org.aeonbits.owner.Config;
 
 public interface ConfigForAuth extends Config {
 
+    @Key("login")
     String login();
+
+    @Key("password")
     String password();
 }

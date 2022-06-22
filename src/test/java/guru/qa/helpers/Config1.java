@@ -12,17 +12,17 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class Config1 {
-    static ConfigForAuth configForAuth = ConfigFactory.create(ConfigForAuth.class);
+    public static ConfigForAuth configForAuth = ConfigFactory.create(ConfigForAuth.class, System.getProperties());
     public static String login = configForAuth.login();
     public static String password = configForAuth.password();
     public static String authCookieName = "NOPCOMMERCE.AUTH";
 
     @BeforeAll
     static void configBeforeAll() {
-        ConfigProps configProps = ConfigFactory.create(ConfigProps.class);
-        Configuration.remote = configProps.selenideUrl();
-        Configuration.baseUrl = configProps.url();
-        RestAssured.baseURI = configProps.url();
+        ConfigProps configProps = ConfigFactory.create(ConfigProps.class, System.getProperties());
+        Configuration.remote = String.valueOf(configProps.selenideUrl());
+        Configuration.baseUrl = configProps.baseUrl();
+        RestAssured.baseURI = configProps.baseUrl();
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         DesiredCapabilities capabilities = new DesiredCapabilities();

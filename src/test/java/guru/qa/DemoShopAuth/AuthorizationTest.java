@@ -21,7 +21,7 @@ public class AuthorizationTest extends Config1 {
     @Tag("demowebshop")
     public static class DemoWebShopTests {
 
-    /*    @Test
+        @Test
         @DisplayName("Successful authorization to some demowebshop (UI)")
         void loginTest() {
             step("Open login page", () ->
@@ -36,8 +36,6 @@ public class AuthorizationTest extends Config1 {
             step("Verify successful authorization", () ->
                     $(".account").shouldHave(text(login)));
         }
-*/
-/*
         @Test
         @DisplayName("Successful authorization to some demowebshop (API + UI)")
         void loginWithApiTest() {
@@ -68,7 +66,6 @@ public class AuthorizationTest extends Config1 {
             step("Verify successful authorization", () ->
                     $(".account").shouldHave(text(login)));
         }
-*/
 
         @Test
         @DisplayName("Successful authorization to some demowebshop (API + UI)")

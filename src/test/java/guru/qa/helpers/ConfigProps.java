@@ -2,6 +2,8 @@ package guru.qa.helpers;
 
 import org.aeonbits.owner.Config;
 
+import java.net.URL;
+
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @ConfigProps.Sources({
         "system:properties",
@@ -9,6 +11,10 @@ import org.aeonbits.owner.Config;
 })
 public interface ConfigProps extends Config{
 
-    String url();
-    String selenideUrl();
+    @Key("baseUrl")
+    @DefaultValue("http://demowebshop.tricentis.com")
+    String baseUrl();
+
+    @Key("remoteUrl")
+    URL selenideUrl();
 }
