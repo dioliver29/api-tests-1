@@ -20,9 +20,9 @@ public class Config1 {
     @BeforeAll
     static void configBeforeAll() {
         ConfigProps configProps = ConfigFactory.create(ConfigProps.class);
-        Configuration.remote = ConfigForTests.config.selenideUrl();
-        Configuration.baseUrl = ConfigForTests.config.url();
-        RestAssured.baseURI = ConfigForTests.config.url();
+        Configuration.remote = configProps.selenideUrl();
+        Configuration.baseUrl = configProps.url();
+        RestAssured.baseURI = configProps.url();
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
