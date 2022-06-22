@@ -1,6 +1,7 @@
 package guru.qa.apiTests;
 
 import io.restassured.http.ContentType;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -8,6 +9,7 @@ import static org.hamcrest.Matchers.*;
 
 public class ApiTests {
 
+    @Tag("first api tests")
     @Test
     void checkTotalPages() {
         given()

@@ -19,6 +19,7 @@ public class Config1 {
 
     @BeforeAll
     static void configBeforeAll() {
+        ConfigProps configProps = ConfigFactory.create(ConfigProps.class);
         Configuration.remote = ConfigForTests.config.selenideUrl();
         Configuration.baseUrl = ConfigForTests.config.url();
         RestAssured.baseURI = ConfigForTests.config.url();
