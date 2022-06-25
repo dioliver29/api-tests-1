@@ -19,11 +19,16 @@ public class Config1 {
 
     @BeforeAll
     static void configBeforeAll() {
-        ConfigProps configProps = ConfigFactory.create(ConfigProps.class, System.getProperties());
-        Configuration.remote = String.valueOf(configProps.selenideUrl());
-        Configuration.baseUrl = configProps.baseUrl();
-        RestAssured.baseURI = configProps.baseUrl();
+        ConfigProps configProps = ConfigFactory.create(ConfigProps.class);
+        Configuration.baseUrl = configProps.webUrl();
+        RestAssured.baseURI = configProps.apiUrl();
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+
+        ConfigRemote configRemote = ConfigFactory.create(ConfigRemote.class, System.getProperties());
+
+        String propertyRemoteUrl = System.getProperty("remoteUrl", configRemote.selenideUrl());
+        Configuration.remote = propertyRemoteUrl;
+
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);

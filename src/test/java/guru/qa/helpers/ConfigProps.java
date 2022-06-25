@@ -2,19 +2,15 @@ package guru.qa.helpers;
 
 import org.aeonbits.owner.Config;
 
-import java.net.URL;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @ConfigProps.Sources({
-        "system:properties",
-        "classpath:remote.properties"
+        "classpath:config/config.properties"
 })
 public interface ConfigProps extends Config{
 
-    @Key("baseUrl")
-    @DefaultValue("http://demowebshop.tricentis.com")
-    String baseUrl();
+    String webUrl();
+    String apiUrl();
 
-    @Key("remoteUrl")
-    URL selenideUrl();
+//    URL selenideUrl();
 }
