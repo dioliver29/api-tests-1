@@ -42,7 +42,7 @@ tasks.withType(JavaCompile) {
 
 tasks.withType(Test) {
     useJUnitPlatform() {
-        includeTags 'ex'
+        includeTags 'demowebshop'
     }
 }
 
