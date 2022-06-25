@@ -99,8 +99,7 @@ public class AuthorizationTest extends Config1 {
         }
 
         @Test
-        @Tag("demowebshop")
-        @DisplayName("")
+        @DisplayName("щшршрщ")
         void addProductToCartWithDynamicCookieTest() {
             String authCookieValue = given()
                     .filter(withCustomTemplates())
