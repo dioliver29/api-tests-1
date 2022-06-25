@@ -1,7 +1,7 @@
 package guru.qa.DemoShopAuth;
 
 import com.codeborne.selenide.WebDriverRunner;
-import guru.qa.helpers.Config1;
+import guru.qa.helpers.TestBase;
 import io.qameta.allure.restassured.AllureRestAssured;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.Cookie;
@@ -16,7 +16,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 
-public class AuthorizationTest extends Config1 {
+public class AuthorizationTest extends TestBase {
 
     @Tag("demowebshop")
     public static class DemoWebShopTests {

@@ -3,7 +3,7 @@ package guru.qa.helpers;
 import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
-@ConfigProps.Sources({
+@ConfigWebAndApiUrls.Sources({
         "system:properties",
         "classpath:credential.properties"
 })

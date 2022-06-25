@@ -4,10 +4,11 @@ import org.aeonbits.owner.Config;
 
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
-@ConfigProps.Sources({
+@ConfigWebAndApiUrls.Sources({
+        "system:properties",
         "classpath:config.properties"
 })
-public interface ConfigProps extends Config{
+public interface ConfigWebAndApiUrls extends Config{
 
     String webUrl();
     String apiUrl();

@@ -11,7 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
-public class Config1 {
+public class TestBase {
     public static ConfigForAuth configForAuth = ConfigFactory.create(ConfigForAuth.class, System.getProperties());
     public static String login = configForAuth.login();
     public static String password = configForAuth.password();
