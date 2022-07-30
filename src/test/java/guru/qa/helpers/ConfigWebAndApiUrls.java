@@ -2,16 +2,16 @@ package guru.qa.helpers;
 
 import org.aeonbits.owner.Config;
 
-
 @Config.LoadPolicy(Config.LoadType.MERGE)
-@ConfigWebAndApiUrls.Sources({
+@Config.Sources({
         "system:properties",
         "classpath:config.properties"
 })
 public interface ConfigWebAndApiUrls extends Config{
 
+    @Key("webUrl")
     String webUrl();
-    String apiUrl();
 
-//    URL selenideUrl();
+    @Key("selenideUrl")
+    String selenideUrl();
 }

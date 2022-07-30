@@ -16,10 +16,8 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 
-@Tag("demowebshop")
 public class AuthorizationTest extends TestBase {
 
- //       @Tag("demowebshop")
         @Test
         @DisplayName("Successful authorization to some demowebshop (UI)")
         void loginTest() {
@@ -35,6 +33,7 @@ public class AuthorizationTest extends TestBase {
             step("Verify successful authorization", () ->
                     $(".account").shouldHave(text(login)));
         }
+
         @Test
         @DisplayName("Successful authorization to some demowebshop (API + UI)")
         void loginWithApiTest() {
