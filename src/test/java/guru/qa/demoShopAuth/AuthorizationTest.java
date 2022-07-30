@@ -1,4 +1,4 @@
-package guru.qa.DemoShopAuth;
+package guru.qa.demoShopAuth;
 
 import com.codeborne.selenide.WebDriverRunner;
 import guru.qa.helpers.TestBase;
@@ -18,9 +18,7 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class AuthorizationTest extends TestBase {
 
-    @Tag("demowebshop")
-    public static class DemoWebShopTests {
-
+ //       @Tag("demowebshop")
         @Test
         @DisplayName("Successful authorization to some demowebshop (UI)")
         void loginTest() {
@@ -99,7 +97,7 @@ public class AuthorizationTest extends TestBase {
         }
 
         @Test
-        @DisplayName("щшршрщ")
+        @DisplayName("add Product To Cart")
         void addProductToCartWithDynamicCookieTest() {
             String authCookieValue = given()
                     .filter(withCustomTemplates())
@@ -151,4 +149,3 @@ public class AuthorizationTest extends TestBase {
         }
 
     }
-}

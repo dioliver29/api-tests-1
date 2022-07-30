@@ -10,5 +10,6 @@ import org.aeonbits.owner.Config;
 
 public interface ConfigRemote extends Config {
 
+    @Key("remoteUrl")
     String selenideUrl();
 }
