@@ -32,7 +32,7 @@ public class TestBase {
     }
 
     @AfterEach
-    public void afterEach() {
+    void afterEach() {
 
         ALlureAttachments.screenshotAs("Final screenshot");
         ALlureAttachments.pageSource();
