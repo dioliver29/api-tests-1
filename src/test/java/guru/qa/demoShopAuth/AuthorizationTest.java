@@ -16,6 +16,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 
+@Tag("demowebshop")
 public class AuthorizationTest extends TestBase {
 
  //       @Tag("demowebshop")
